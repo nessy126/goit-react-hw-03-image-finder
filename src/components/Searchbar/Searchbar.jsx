@@ -5,7 +5,6 @@ class Searchbar extends Component {
     q: "",
   }
   onChange = (e) => {
-    // console.log(e)
     this.setState({ q: e.target.value })
   }
 
@@ -14,20 +13,19 @@ class Searchbar extends Component {
     return (
       <header className="Searchbar">
         <form onSubmit={onSubmit} className="SearchForm">
-          <button type="submit" className="SearchFormButton">
-            <span className="SearchFormButtonLabel">Search</span>
-          </button>
-
           <input
+            className="SearchFormInput"
             onChange={this.onChange}
             name="q"
-            className="SearchFormInput"
             type="text"
-            autocomplete="off"
-            autofocus
+            autoComplete="off"
+            autoFocus
             placeholder="Search images and photos"
             value={this.state.q}
           />
+          <button type="submit" className="SearchFormButton">
+            <span className="SearchFormButtonLabel">Search</span>
+          </button>
         </form>
       </header>
     )

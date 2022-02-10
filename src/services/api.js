@@ -20,4 +20,3 @@ export const getImaiges = ({ q = "natural", page = 1 }) => {
     .then(res => res.data.hits)
     .catch(error => {throw error})
 }
-//  getImaiges()
